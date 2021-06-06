@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: domainsale-deployment-v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: domainsale-app-v1
+  template:
+    metadata:
+      labels:
+        app: domainsale-app-v1
+    spec:
+      containers:
+      - name: domainsale-app-v1
+        imagePullPolicy: Always
+        image: k4sartifacts.azurecr.io/domainsale:v1

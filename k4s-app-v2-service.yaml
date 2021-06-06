@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: domainsale-svc-v2
+spec:
+  selector:
+    app: domainsale-app-v2
+  type: ClusterIP
+  ports:
+  - name: https
+    protocol: TCP
+    port: 5001
+    targetPort: 443

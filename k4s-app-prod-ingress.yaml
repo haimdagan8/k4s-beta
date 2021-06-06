@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k4s-ingress-prod
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  tls:
+  - secretName: k4s-io
+    hosts:
+    - "k4s.io"
+  rules:
+  - host: "k4s.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: domainsale-svc-v1
+            port:
+              number: 5000
