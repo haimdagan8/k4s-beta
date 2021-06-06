@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: domainsale-deployment-v1
 spec:
-  replicas: 2
+  replicas: 8
   selector:
     matchLabels:
       app: domainsale-app-v1
