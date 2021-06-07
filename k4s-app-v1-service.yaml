@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: domainsale-app-v1
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - name: https
     protocol: TCP
