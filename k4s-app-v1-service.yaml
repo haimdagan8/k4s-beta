@@ -9,5 +9,5 @@ spec:
   ports:
   - name: https
     protocol: TCP
-    port: 443
+    port: 8080
     targetPort: 443
