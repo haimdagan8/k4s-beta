@@ -16,3 +16,5 @@ spec:
       - name: domainsale-app-v1
         imagePullPolicy: Always
         image: k4sartifacts.azurecr.io/domainsale:v1
+        ports:
+          - containerPort: 443
